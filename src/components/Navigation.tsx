@@ -1,0 +1,81 @@
+"use client";
+
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import WangLogoModal from "./WangLogoModal";
+
+export default function Navigation() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    let timeoutId: ReturnType<typeof setTimeout> | null = null;
+    const handleScroll = () => {
+      if (timeoutId === null) {
+        timeoutId = setTimeout(() => {
+          setIsScrolled(window.scrollY > 50);
+          timeoutId = null;
+        }, 100);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, []);
+
+  return (
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        isScrolled ? "glass-panel thin-divider py-6" : "bg-transparent py-10"
+      }`}
+    >
+      <div className="container mx-auto px-6 flex justify-between items-center">
+        <div className="flex items-center gap-4 group transition-all">
+          <WangLogoModal />
+          <Link href="/" className="font-serif text-xl tracking-widest uppercase text-gradient-gold hover:brightness-125 transition-all">
+            Wang
+          </Link>
+        </div>
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex gap-16 items-center text-sm uppercase tracking-widest text-foreground/70">
+          <Link href="/#il-viaggio" className="hover:text-gold gold-glow transition-all">Il Viaggio</Link>
+          <Link href="/dispositivi" className="hover:text-gold gold-glow transition-all">Dispositivi</Link>
+          <Link href="/autore" className="hover:text-gold gold-glow transition-all">L'Autore</Link>
+          <Link href="/materiali" className="hover:text-gold gold-glow transition-all">Materiali</Link>
+        </nav>
+
+        {/* Mobile Menu Toggle */}
+        <button
+          className="md:hidden text-foreground/80 hover:text-gold gold-glow transition-all"
+          aria-label="Toggle mobile menu"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Nav */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="absolute top-full left-0 w-full glass-panel thin-divider p-6 flex flex-col gap-6 md:hidden"
+          >
+            <Link href="/#il-viaggio" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Il Viaggio</Link>
+            <Link href="/dispositivi" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Dispositivi</Link>
+            <Link href="/autore" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>L'Autore</Link>
+            <Link href="/materiali" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Materiali</Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ferro",
+    "name": "Ferro",
+    "category": "spirito",
+    "description": "\"Fuoco primordiale\", guerriero che gronda sangue."
+  },
+  {
+    "id": "rame",
+    "name": "Rame",
+    "category": "spirito",
+    "description": "\"Acqua\", pelle che si fa muschio, trasporta emozione."
+  },
+  {
+    "id": "alluminio",
+    "name": "Alluminio",
+    "category": "spirito",
+    "description": "\"Aria\", fulmine mineralizzato, un soffio condensato."
+  },
+  {
+    "id": "acciaio-corten",
+    "name": "Acciaio Corten",
+    "category": "spirito",
+    "description": "\"Fiamma che ha imparato a contenersi\"."
+  },
+  {
+    "id": "quercia",
+    "name": "Quercia",
+    "category": "anima",
+    "description": "Monarca lenta e regale; fonda e sostiene. (Terra)"
+  },
+  {
+    "id": "olmo",
+    "name": "Olmo",
+    "category": "anima",
+    "description": "Fluidificante; lavora sulla continuità dei passaggi. (Acqua)"
+  },
+  {
+    "id": "betulla",
+    "name": "Betulla",
+    "category": "anima",
+    "description": "Corteccia di luce e suono; sussurra nel silenzio. (Aria)"
+  },
+  {
+    "id": "ciliegio",
+    "name": "Ciliegio",
+    "category": "anima",
+    "description": "Fibra tesa che anima senza distruggere. (Fuoco)"
+  }
+]

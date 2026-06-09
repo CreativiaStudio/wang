@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  --background: #141414;
+  --foreground: rgba(255, 255, 255, 0.85);
+  
+  /* Alchemical Accents */
+  --gold: #D4AF37;
+  --gold-soft: #F3E5AB;
+  
+  /* Golden Ratio base spacing (1rem = 16px) */
+  --phi: 1.618;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-cormorant);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E0AA3E;
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif), serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.8;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #F9F295, #E0AA3E, #E0AA3E, #B8860B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-copper {
+  background: linear-gradient(135deg, #F3A183, #B87333, #8A3324);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-text {
+  background: linear-gradient(45deg, #BF953F, #FCF6BA, #B38728, #FBF5B7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-panel {
+  background: rgba(25, 25, 25, 0.4);
+  backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.gold-glow {
+  transition: all 0.5s ease;
+}
+
+.gold-glow:hover {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+.drop-shadow-gold {
+  filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.3));
+  transition: filter 0.7s ease;
+}
+
+.drop-shadow-gold:hover {
+  filter: drop-shadow(0 0 40px rgba(212, 175, 55, 0.6));
+}
+
+.thin-divider {
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}

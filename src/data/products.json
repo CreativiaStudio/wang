@@ -1,0 +1,102 @@
+[
+  {
+    "id": "genesa-crystal",
+    "name": "Genesa Crystal",
+    "slug": "genesa-crystal",
+    "image": "/Genesa_render.jpg",
+    "plane": "Piano Fisico ed Eterico",
+    "function": "La Genesa riproduce il primo stato di equilibrio perfetto. È un organismo geometrico vivente che agisce sul piano Fisico e sul piano Eterico. Armonizza, ordina e riattiva l'energia vitale dell'ambiente e della persona.",
+    "polarity": {
+      "yin": {
+        "name": "Genesa Yin",
+        "description": "Stabilizza e nutre. Inspira e raduna l'energia per purificarla."
+      },
+      "yang": {
+        "name": "Genesa Yang",
+        "description": "Crea e manifesta. Attira l'energia vitale dispersa ed espira una corrente generativa."
+      }
+    },
+    "dimensions": [
+      { "size": "14,6 cm", "scope": "uso personale/altare" },
+      { "size": "23,6 cm", "scope": "piccoli spazi/comodino" },
+      { "size": "38,2 cm", "scope": "stanze/ambienti lavorativi" },
+      { "size": "61,8 cm", "scope": "ambienti medio-grandi/giardini" },
+      { "size": "100 cm", "scope": "larga scala/orti energetici" }
+    ]
+  },
+  {
+    "id": "pentasfera",
+    "name": "Pentasfera",
+    "slug": "pentasfera",
+    "image": "/Pentasfera_render.jpg",
+    "plane": "Piano Astrale",
+    "function": "La Pentasfera opera sul piano Astrale, la dimora delle emozioni. È un campo di risonanza che favorisce il bilanciamento emotivo e aiuta a trasformare le correnti caotiche in onde coerenti, portando chiarezza al cuore.",
+    "polarity": {
+      "yin": {
+        "name": "Pentasfera Yin",
+        "description": "Accoglie la nostalgia e la gioia, culla le emozioni per purificarle."
+      },
+      "yang": {
+        "name": "Pentasfera Yang",
+        "description": "Più viscerale. Risucchia gli istinti e libera l'energia in un'onda controllata dando forma alle emozioni."
+      }
+    },
+    "dimensions": [
+      { "size": "24,3 cm", "scope": "personale/scrivania" },
+      { "size": "39,3 cm", "scope": "piccoli spazi di meditazione" },
+      { "size": "63,7 cm", "scope": "piccoli gruppi/studi" },
+      { "size": "103 cm", "scope": "campo esteso/cerimonie" },
+      { "size": "166,7 cm", "scope": "spazi naturali/grandi gruppi - ci si può entrare" }
+    ]
+  },
+  {
+    "id": "ipergenesa",
+    "name": "IperGenesa",
+    "slug": "ipergenesa",
+    "image": "/IperGenesa_render.jpg",
+    "plane": "Piano Mentale",
+    "function": "L'IperGenesa è una struttura di quinta dimensione che opera sul Piano Mentale. È uno strumento di allineamento tra il pensiero e la realtà, che attiva, orienta e ordina la mente, favorendo la lucidità e la visione interiore.",
+    "polarity": {
+      "yin": {
+        "name": "IperGenesa Yin",
+        "description": "Percettiva e contemplativa. Ascolta il cielo, decodifica i moti sottili e accoglie le intuizioni."
+      },
+      "yang": {
+        "name": "IperGenesa Yang",
+        "description": "Espressiva e ordinante. Dirige il flusso verso il mondo, raccoglie le vibrazioni e le traduce in linguaggio."
+      }
+    },
+    "dimensions": [
+      { "size": "24,3 cm", "scope": "studi/lavoro mentale" },
+      { "size": "39,3 cm", "scope": "progettazione/canalizzazione" },
+      { "size": "63,7 cm", "scope": "team creativi/problem solving" },
+      { "size": "103 cm", "scope": "meditazioni guidate/laboratori" },
+      { "size": "166,7 cm", "scope": "eventi su larga scala/ritiri" }
+    ]
+  },
+  {
+    "id": "unisfera",
+    "name": "Unisfera",
+    "slug": "unisfera",
+    "image": "/Unisfera_render.jpg",
+    "plane": "Campo di Coscienza Integrato",
+    "function": "L'Unisfera è il portale supremo che racchiude e sintetizza tutte le geometrie precedenti. Integra corpo, emozioni e mente in un unico campo unificato. È il simbolo di un potenziale infinito che supporta la trasformazione e l'evoluzione multidimensionale.",
+    "polarity": {
+      "yin": {
+        "name": "Unisfera Yin (La Madre)",
+        "description": "L'utero sacro dove l'energia cresce. Inspira dal ventre dell'emozione ed espira sciogliendo la luce nell'acqua."
+      },
+      "yang": {
+        "name": "Unisfera Yang (Il Padre)",
+        "description": "La torre che irradia. Inspira dalle viscere raccogliendo la potenza della materia ed espira scendendo come calore che anima."
+      }
+    },
+    "dimensions": [
+      { "size": "24,3 cm", "scope": "allineamento spirituale" },
+      { "size": "39,3 cm", "scope": "sale yoga/introspezione" },
+      { "size": "63,7 cm", "scope": "trattamenti energetici" },
+      { "size": "103 cm", "scope": "luoghi sacri/ancoraggio frequenze" },
+      { "size": "166,7 cm", "scope": "lavori planetari/portale di connessione" }
+    ]
+  }
+]
