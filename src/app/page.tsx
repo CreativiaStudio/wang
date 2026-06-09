@@ -59,6 +59,26 @@ export default function Home() {
                   <div className="h-px bg-gold/30 flex-grow" />
                 </div>
                 
+                {/* Mobile Image */}
+                <div className="md:hidden relative aspect-square flex items-center justify-center py-4 w-full max-w-[260px] mx-auto">
+                  <div className="absolute inset-0 bg-gold/5 rounded-full blur-2xl opacity-30 mix-blend-screen" />
+                  <motion.div
+                    animate={{ y: [-5, 5, -5] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                    className="relative z-10 w-full h-full flex items-center justify-center"
+                  >
+                    {product.image && (
+                      <Image 
+                        src={product.image} 
+                        alt={product.name}
+                        width={300}
+                        height={300}
+                        className="object-contain drop-shadow-gold"
+                      />
+                    )}
+                  </motion.div>
+                </div>
+
                 <h2 className="text-4xl md:text-6xl font-serif text-gradient-gold">{product.name}</h2>
                 <h3 className="text-2xl text-gold italic font-serif mb-4">{product.plane}</h3>
                 
@@ -81,7 +101,7 @@ export default function Home() {
 
               {/* Visual Content */}
               <motion.div 
-                className="relative aspect-square flex items-center justify-center p-8"
+                className="hidden md:flex relative aspect-square items-center justify-center p-8"
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 }}
