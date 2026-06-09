@@ -53,7 +53,7 @@ export default function Navigation() {
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center gap-4 group transition-all">
           <WangLogoModal />
-          <Link href="/" className="font-serif text-xl tracking-widest uppercase text-gradient-gold hover:brightness-125 transition-all">
+          <Link href="/" className="font-serif text-xl tracking-widest uppercase text-gradient-gold hover:brightness-125 transition-all" onClick={() => setIsMobileMenuOpen(false)}>
             Wang
           </Link>
         </div>
