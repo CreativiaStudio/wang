@@ -21,10 +21,10 @@ export default function Home() {
           transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
           viewport={{ once: true }}
         >
-          <h1 className="text-5xl md:text-7xl font-serif text-gradient-gold mb-6 uppercase tracking-widest leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-serif text-gradient-gold mb-6 uppercase tracking-wider md:tracking-widest leading-tight">
             Architettura <br /> del Sacro
           </h1>
-          <p className="text-xl md:text-2xl text-foreground/80 font-light max-w-2xl mx-auto mb-12">
+          <p className="text-lg sm:text-xl md:text-2xl text-foreground/80 font-light max-w-2xl mx-auto mb-12">
             Non semplici oggetti, ma "Ponti verso l'Infinito". Dispositivi radionici per l'armonizzazione degli spazi e della coscienza.
           </p>
           <Link 
