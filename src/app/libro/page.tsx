@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Flipbook from "@/components/Flipbook";
 
 export const metadata: Metadata = {
   title: "Geometrie Consapevoli - Il Libro | Wang Officina Sacra",
@@ -67,6 +68,14 @@ export default function LibroPage() {
     { title: "Appendice C - Le Dimore dell'Energia", page: "81" },
     { title: "Appendice D - Schede tecniche dei Dispositivi", page: "81" },
     { title: "Appendice E - Cosa rappresenta il logo dell'Officina Sacra?", page: "97" },
+  ];
+
+  const bookImages = [
+    "/libro_processed/73.jpg",
+    "/libro_processed/74.jpg",
+    "/libro_processed/75.jpg",
+    "/libro_processed/76.jpg",
+    "/libro_processed/77.jpg",
   ];
 
   return (
@@ -149,15 +158,10 @@ export default function LibroPage() {
         {/* 4. Flipbook Placeholder */}
         <div className="max-w-4xl mx-auto">
           <h2 className="font-serif text-3xl text-gradient-gold uppercase tracking-widest mb-12 text-center">Sfoglia il Libro</h2>
-          <div className="w-full aspect-[4/3] md:aspect-[16/9] glass-panel thin-divider flex flex-col items-center justify-center text-center p-8">
-            <svg className="w-16 h-16 text-gold/50 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>
-            <h3 className="font-serif text-2xl text-gold mb-2">Estratto in Arrivo</h3>
-            <p className="text-foreground/60 font-light max-w-md mx-auto">
-              Il lettore interattivo 3D è in fase di caricamento. Presto potrai sfogliare gratuitamente alcune pagine di Geometrie Consapevoli direttamente qui.
-            </p>
-          </div>
+          <p className="text-center text-foreground/60 mb-12 font-light">Puoi sfogliare l'anteprima cliccando sugli angoli delle pagine o trascinandole.</p>
+          
+          <Flipbook images={bookImages} />
+          
         </div>
 
       </div>
