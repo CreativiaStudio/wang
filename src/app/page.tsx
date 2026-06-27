@@ -22,10 +22,10 @@ export default function Home() {
           viewport={{ once: true }}
         >
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-serif text-gradient-gold mb-6 uppercase tracking-wider md:tracking-widest leading-tight">
-            Architettura <br /> del Sacro
+            Benvenuti <br /> nell'officina sacra.
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-foreground/80 font-light max-w-2xl mx-auto mb-12">
-            Non semplici oggetti, ma "Ponti verso l'Infinito". Dispositivi radionici per l'armonizzazione degli spazi e della coscienza.
+            In uno spazio limitato, dove regna il silenzio e l'ascolto.
           </p>
           <Link 
             href="#il-viaggio" 
