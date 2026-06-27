@@ -3,129 +3,103 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const METALS = ["Rame", "Alluminio", "Ferro", "Ferro brunito", "Ottone", "Bronzo", "Acciaio inossidabile", "Acciaio Corten", "Piombo", "Ghisa", "Zinco"];
-const WOODS = ["Quercia", "Noce", "Faggio", "Castagno", "Ontano", "Salice", "Bambù", "Balsa", "Betulla", "Abete", "Ciliegio", "Teak", "Tiglio", "Acero", "Olmo", "Frassino"];
+const MATERIALS = {
+  Metallo: {
+    name: "Lo Spirito del Metallo",
+    description: "Presenza ordinata, energia concentrata, fulmine mineralizzato che percorre linee invisibili. Il metallo è custode e conduttore: vigile, concentrato, ponte tra impulso e struttura, tra l'idea e la sua realizzazione."
+  },
+  Legno: {
+    name: "L'Anima del Legno",
+    description: "Non è solo materia: è presenza che vibra, memoria che resiste tra radici e chioma. Il legno resta custode delle vibrazioni umane e terrestri: lento, denso, pieno di storia, un ponte tra la materia e l'anima."
+  }
+};
 
 export default function ProductConfigurator({ product }: { product: any }) {
-  const [polarity, setPolarity] = useState<"yin" | "yang">("yin");
   const [dimensionIdx, setDimensionIdx] = useState(0);
-  const [materialCategory, setMaterialCategory] = useState<"Legno" | "Metallo">("Legno");
-  const [materialType, setMaterialType] = useState<string>(WOODS[0]);
+  const [materialCategory, setMaterialCategory] = useState<"Legno" | "Metallo">("Metallo");
 
   const selectedDimension = product.dimensions[dimensionIdx];
-  const activePolarity = product.polarity[polarity];
-  const materialList = materialCategory === "Legno" ? WOODS : METALS;
+  const activeMaterial = MATERIALS[materialCategory];
 
   // Generic WhatsApp number for now
   const whatsappNumber = "390000000000";
-  const whatsappMessage = encodeURIComponent(`Salve, vorrei richiedere informazioni sul dispositivo ${product.name}.\nConfigurazione:\n- Polarità: ${activePolarity.name}\n- Dimensione: ${selectedDimension.size}\n- Materiale: ${materialCategory} (${materialType})`);
+  const whatsappMessage = encodeURIComponent(`Salve, vorrei richiedere informazioni sul dispositivo ${product.name}.\nConfigurazione:\n- Dimensione: ${selectedDimension.size}\n- Essenza: ${activeMaterial.name}`);
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-
-  const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const cat = e.target.value as "Legno" | "Metallo";
-    setMaterialCategory(cat);
-    setMaterialType(cat === "Legno" ? WOODS[0] : METALS[0]);
-  };
 
   return (
     <div className="flex flex-col gap-10">
       
-      {/* 1. Polarità */}
+      {/* 1. Dimensione */}
       <div className="space-y-4">
-        <label className="text-sm font-serif uppercase tracking-widest text-gold block">1. Scegli la Polarità</label>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <button
-            onClick={() => setPolarity("yin")}
-            className={`w-full p-4 border transition-all duration-300 text-left rounded-sm ${polarity === "yin" ? "border-gold text-white shadow-[0_0_20px_rgba(212,175,55,0.15)] bg-gold/5" : "border-white/10 text-white/50 hover:text-white"}`}
-          >
-            <h4 className="font-serif text-lg text-gold mb-1">Yin</h4>
-            <p className="text-xs uppercase tracking-wider">{product.polarity.yin.name}</p>
-          </button>
-          <button
-            onClick={() => setPolarity("yang")}
-            className={`w-full p-4 border transition-all duration-300 text-left rounded-sm ${polarity === "yang" ? "border-gold text-white shadow-[0_0_20px_rgba(212,175,55,0.15)] bg-gold/5" : "border-white/10 text-white/50 hover:text-white"}`}
-          >
-            <h4 className="font-serif text-lg text-gold mb-1">Yang</h4>
-            <p className="text-xs uppercase tracking-wider">{product.polarity.yang.name}</p>
-          </button>
-        </div>
-        
-        {/* Descrizione dinamica polarità */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={polarity}
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -5 }}
-            className="p-4 bg-white/5 border-l-2 border-gold/50 rounded-r-md mt-2"
-          >
-            <p className="text-white/80 text-sm leading-relaxed">{activePolarity.description}</p>
-          </motion.div>
-        </AnimatePresence>
-      </div>
-
-      {/* 2. Dimensione */}
-      <div className="space-y-4">
-        <label className="text-sm font-serif uppercase tracking-widest text-gold block">2. Scegli la Dimensione</label>
+        <label className="text-sm font-serif uppercase tracking-widest text-gold block">1. Scegli la Dimensione</label>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {product.dimensions.map((dim: any, idx: number) => (
-            <button
-              key={idx}
-              onClick={() => setDimensionIdx(idx)}
-              className={`w-full p-3 border transition-all duration-300 text-left flex flex-col gap-1 rounded-sm ${
-                dimensionIdx === idx 
-                  ? "border-gold text-gold shadow-[0_0_15px_rgba(212,175,55,0.1)] bg-gold/5" 
-                  : "border-white/10 text-white/60 hover:text-white hover:border-white/30"
-              }`}
-            >
-              <span className="font-medium text-lg">{dim.size}</span>
-              <span className="text-xs text-white/50 uppercase tracking-wide">{dim.scope}</span>
-            </button>
+            <div key={idx} className="relative group">
+              <button
+                onClick={() => setDimensionIdx(idx)}
+                className={`w-full p-4 border transition-all duration-300 text-left flex flex-col gap-1 rounded-sm ${
+                  dimensionIdx === idx 
+                    ? "border-gold text-gold shadow-[0_0_15px_rgba(212,175,55,0.1)] bg-gold/5" 
+                    : "border-white/10 text-white/60 hover:text-white hover:border-white/30"
+                }`}
+              >
+                <div className="flex justify-between items-center w-full">
+                  <span className="font-medium text-lg">{dim.size}</span>
+                  <svg className="w-4 h-4 text-white/30 group-hover:text-gold transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <span className="text-xs text-white/50 uppercase tracking-wide">{dim.scope}</span>
+              </button>
+              
+              {/* Custom CSS Tooltip */}
+              <div className="absolute z-50 bottom-full left-1/2 -translate-x-1/2 mb-3 w-64 p-3 bg-[#0B0C10] border border-gold/30 text-white/90 text-xs leading-relaxed rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.5)] pointer-events-none">
+                {dim.description}
+                <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 border-solid border-t-[#0B0C10] border-t-8 border-x-transparent border-x-8 border-b-0"></div>
+                <div className="absolute -bottom-[9px] left-1/2 -translate-x-1/2 border-solid border-t-gold/30 border-t-[9px] border-x-transparent border-x-[9px] border-b-0 -z-10"></div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
 
-      {/* 3. Materiale */}
+      {/* 2. Materiale */}
       <div className="space-y-4">
-        <label className="text-sm font-serif uppercase tracking-widest text-gold block">3. Scegli il Materiale</label>
+        <label className="text-sm font-serif uppercase tracking-widest text-gold block">2. L'Essenza (Materiale)</label>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          
-          <div className="flex flex-col gap-2">
-            <span className="text-xs text-white/50 uppercase">Categoria</span>
-            <div className="relative">
-              <select 
-                value={materialCategory}
-                onChange={handleCategoryChange}
-                className="w-full bg-[#0B0C10] border border-white/20 text-white p-3 rounded-sm focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold appearance-none"
-              >
-                <option value="Legno">Legno</option>
-                <option value="Metallo">Metallo</option>
-              </select>
-              <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none text-white/50">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <span className="text-xs text-white/50 uppercase">Essenza / Lega</span>
-            <div className="relative">
-              <select 
-                value={materialType}
-                onChange={(e) => setMaterialType(e.target.value)}
-                className="w-full bg-[#0B0C10] border border-white/20 text-white p-3 rounded-sm focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold appearance-none"
-              >
-                {materialList.map(mat => (
-                  <option key={mat} value={mat}>{mat}</option>
-                ))}
-              </select>
-              <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none text-white/50">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-              </div>
-            </div>
-          </div>
-
+          <button
+            onClick={() => setMaterialCategory("Metallo")}
+            className={`w-full p-4 border transition-all duration-300 text-left rounded-sm ${materialCategory === "Metallo" ? "border-gold text-white shadow-[0_0_20px_rgba(212,175,55,0.15)] bg-gold/5" : "border-white/10 text-white/50 hover:text-white"}`}
+          >
+            <h4 className="font-serif text-lg text-gold mb-1">Metallo</h4>
+            <p className="text-xs uppercase tracking-wider">{MATERIALS.Metallo.name}</p>
+          </button>
+          <button
+            onClick={() => setMaterialCategory("Legno")}
+            className={`w-full p-4 border transition-all duration-300 text-left rounded-sm ${materialCategory === "Legno" ? "border-gold text-white shadow-[0_0_20px_rgba(212,175,55,0.15)] bg-gold/5" : "border-white/10 text-white/50 hover:text-white"}`}
+          >
+            <h4 className="font-serif text-lg text-gold mb-1">Legno</h4>
+            <p className="text-xs uppercase tracking-wider">{MATERIALS.Legno.name}</p>
+          </button>
         </div>
+        
+        {/* Descrizione dinamica materiale */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={materialCategory}
+            initial={{ opacity: 0, y: 5 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -5 }}
+            transition={{ duration: 0.3 }}
+            className="p-4 bg-white/5 border-l-2 border-gold/50 rounded-r-md mt-2"
+          >
+            <p className="text-white/80 text-sm leading-relaxed italic">"{activeMaterial.description}"</p>
+          </motion.div>
+        </AnimatePresence>
+
+        {/* UX Note */}
+        <p className="text-white/50 text-xs leading-relaxed border-l-2 border-white/10 pl-4 mt-6">
+          <strong className="text-white/70 font-normal">Ogni materia ha un'Anima, un'impronta sottile che va oltre la forma.</strong><br />
+          Scegliendo il Legno o il Metallo ci indichi la via; l'essenza specifica o la lega più adatta a te verrà definita insieme all'artigiano dopo l'ordine, in base alla risonanza e alle tue necessità.
+        </p>
       </div>
 
       {/* CTA */}
