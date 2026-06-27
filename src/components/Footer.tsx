@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LegalDisclaimerModal from "./LegalDisclaimerModal";
 
 export default function Footer() {
   return (
@@ -38,9 +39,11 @@ export default function Footer() {
             I dispositivi non sono presidi medici. Sono strumenti energetici per l'armonizzazione e il benessere;<br />
             non sostituiscono il parere di un medico qualificato.
           </p>
-          <p className="text-xs text-foreground/30 uppercase tracking-widest">
-            &copy; {new Date().getFullYear()} Wang Officina Sacra. Tutti i diritti riservati.
-          </p>
+          <div className="text-xs text-foreground/30 uppercase tracking-widest flex flex-col md:flex-row items-center justify-center gap-2">
+            <span>&copy; 2025 Wang - Officina Sacra™ Tutti i diritti riservati.</span>
+            <span className="hidden md:inline">|</span>
+            <LegalDisclaimerModal />
+          </div>
         </div>
       </div>
     </footer>
