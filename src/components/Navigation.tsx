@@ -63,7 +63,6 @@ export default function Navigation() {
           <Link href="/chi-sono" className="hover:text-gold gold-glow transition-all">Chi sono</Link>
           <Link href="/libro" className="hover:text-gold gold-glow transition-all">Libro</Link>
           <Link href="/dispositivi" className="hover:text-gold gold-glow transition-all">Dispositivi</Link>
-          <Link href="/materiali" className="hover:text-gold gold-glow transition-all">Materiali</Link>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -89,7 +88,6 @@ export default function Navigation() {
             <Link href="/chi-sono" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Chi sono</Link>
             <Link href="/libro" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Libro</Link>
             <Link href="/dispositivi" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Dispositivi</Link>
-            <Link href="/materiali" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Materiali</Link>
           </motion.div>
         )}
       </AnimatePresence>

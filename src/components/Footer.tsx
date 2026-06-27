@@ -20,7 +20,7 @@ export default function Footer() {
             <nav className="flex flex-col text-sm text-foreground/60">
               <Link href="/dispositivi" className="block py-3 hover:text-gold transition-colors">I Dispositivi</Link>
               <Link href="/chi-sono" className="block py-3 hover:text-gold transition-colors">Chi sono</Link>
-              <Link href="/materiali" className="block py-3 hover:text-gold transition-colors">I Materiali</Link>
+
             </nav>
           </div>
 
