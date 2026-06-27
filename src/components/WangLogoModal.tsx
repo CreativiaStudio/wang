@@ -48,22 +48,53 @@ export default function WangLogoModal() {
                 <div className="w-24 h-24 rounded-full border border-gold flex items-center justify-center text-gold mb-6 gold-glow overflow-hidden relative bg-black">
                   <Image src="/logo_gold.png" alt="Wang Logo" fill className="object-contain p-3" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-serif text-gradient-gold text-center">Il Sovrano che unisce Cielo e Terra</h2>
+                <h2 className="text-3xl md:text-4xl font-serif text-gradient-gold text-center">Cosa rappresenta il logo dell'Officina Sacra?</h2>
               </div>
 
               <div className="space-y-6 text-foreground/80 leading-relaxed font-light">
                 <p>
-                  Nella tradizione, l'ideogramma <strong>Wang (王)</strong> rappresenta il Sovrano. Le tre linee orizzontali simboleggiano il Cielo, l'Umanità e la Terra. La linea verticale che le attraversa rappresenta colui che è in grado di unire questi tre mondi.
+                  È la mia personale interpretazione dell'ultimo kanji del termine giapponese ikigai 生き甲斐.
                 </p>
                 <p>
-                  <em>Wang - Officina Sacra</em> nasce da questa consapevolezza: non si tratta di produrre oggetti, ma di forgiare "Ponti verso l'Infinito". Ogni forma creata all'interno dell'officina rispetta le proporzioni auree e le leggi dell'armonia universale, operando come un dispositivo di risonanza tra le dimensioni spirituali e quelle materiali.
+                  È un racconto racchiuso in pochi tratti.
                 </p>
                 <p>
-                  Come descritto nell'Appendice E del libro dell'autore, il passaggio dall'Architettura classica alla comprensione dell'operatività sottile delle forme richiede un salto quantico della coscienza: l'Architetto diventa Artigiano, e l'Artigiano si rivela Cercatore.
+                  C'è <strong>un piano di lavoro</strong> sorretto da due assi: il luogo dell'agire nella dualità.<br />
+                  Sopra di esso poggia <strong>un oggetto</strong>: la materia su cui si compie il Lavoro umano.
                 </p>
-                <p className="text-gold italic text-center mt-8 text-lg font-serif">
-                  "Sono stati necessari molti menhir per giungere a una Cattedrale gotica. Ogni gesto è un Rito, ogni forma è un Codice, ogni oggetto è un Messaggio."
+                <p>
+                  Su di loro aleggia <strong>un'onda</strong> che tende verso l'alto.<br />
+                  È l'aspirazione dell'uomo: il desiderio di elevarsi, di cercare senso,<br />
+                  di volgere lo sguardo dal mondo orizzontale della necessità<br />
+                  al mondo verticale del significato.
                 </p>
+                <p>
+                  Dall'alto scende come risposta <strong>un raggio verticale</strong>:<br />
+                  il messaggio cosmico, l'ispirazione, la scintilla che non si fabbrica con le<br />
+                  mani ma arriva, quando arriva, come un soffio.
+                </p>
+                <p>
+                  Quando l'onda terrestre e il raggio cosmico si incontrano attraverso il gesto,<br />
+                  si apre <strong>un varco</strong> nel confine tra il nostro mondo e le dimensioni superiori.
+                </p>
+                <p>
+                  In quell'istante accade il miracolo:<br />
+                  il tavolo diventa altare;<br />
+                  l'oggetto si fa offerta — non un manufatto, ma una presenza che trattiene un senso;<br />
+                  l'artigiano diventa sacerdote del gesto: colui che opera e custodisce con consapevolezza, con ascolto, con dedizione;<br />
+                  l'atto non è più solo lavoro: diventa Sacro Officio.
+                </p>
+                <p className="mt-8 font-serif text-xl text-gold">
+                  Il logo rappresenta quell'incontro trascendente:
+                </p>
+                <div className="space-y-2 mt-4 text-lg">
+                  <p>
+                    <strong className="text-gold">Wang</strong> — il sovrano, il pontefice, colui che costruisce ponti tra i Mondi.
+                  </p>
+                  <p>
+                    <strong className="text-gold">Officina Sacra</strong> — il luogo in cui il fare diventa rito.
+                  </p>
+                </div>
               </div>
             </motion.div>
           </div>
