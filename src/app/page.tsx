@@ -47,7 +47,7 @@ export default function Home() {
           viewport={{ once: true, margin: "-100px" }}
         >
           <p>
-            Nascono creazioni che hanno la Missione di essere un Ponte verso l'Infinito.
+            Le creazioni hanno la Missione di essere un Ponte verso l'Infinito.
           </p>
           <p>
             Oggetti realizzati a mano,<br/>
