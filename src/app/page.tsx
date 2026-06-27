@@ -37,6 +37,43 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* Manifesto Section */}
+      <section className="py-24 md:py-40 relative flex items-center justify-center px-6">
+        <motion.div 
+          className="max-w-3xl mx-auto text-center font-serif text-lg md:text-2xl leading-loose md:leading-loose text-foreground/80 italic space-y-8"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <p>
+            In uno spazio limitato,<br/>
+            in cui regna il silenzio e l'ascolto,<br/>
+            nascono creazioni che hanno la Missione di essere un Ponte verso l'Infinito.
+          </p>
+          <p>
+            Oggetti realizzati a mano,<br/>
+            con Presenza ed Intenzione,<br/>
+            ispirati alle Tradizioni simboliche ed ai Percorsi interiori.
+          </p>
+          <p>
+            Ogni strumento è un'offerta silenziosa.
+          </p>
+          <p>
+            non è solo Artigianato,<br/>
+            non è solo Spiritualità.
+          </p>
+          <p>
+            Ogni gesto è un Rito,<br/>
+            ogni forma è un Codice<br/>
+            ogni oggetto è un Messaggio.
+          </p>
+          <p className="text-xl md:text-3xl text-gold mt-12 pt-8">
+            Benvenuti nell'Officina Sacra.
+          </p>
+        </motion.div>
+      </section>
+
       {/* Il Viaggio dell'Eroe (Scroll-telling) */}
       <section id="il-viaggio" className="py-32 md:py-48">
         {products.map((product, index) => (
