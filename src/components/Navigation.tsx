@@ -60,9 +60,9 @@ export default function Navigation() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-16 items-center text-sm uppercase tracking-widest text-foreground/70">
-          <Link href="/#il-viaggio" className="hover:text-gold gold-glow transition-all">Il Viaggio</Link>
+          <Link href="/chi-sono" className="hover:text-gold gold-glow transition-all">Chi sono</Link>
+          <Link href="/libro" className="hover:text-gold gold-glow transition-all">Libro</Link>
           <Link href="/dispositivi" className="hover:text-gold gold-glow transition-all">Dispositivi</Link>
-          <Link href="/autore" className="hover:text-gold gold-glow transition-all">L'Autore</Link>
           <Link href="/materiali" className="hover:text-gold gold-glow transition-all">Materiali</Link>
         </nav>
 
@@ -86,9 +86,9 @@ export default function Navigation() {
             transition={{ duration: 0.3 }}
             className="absolute top-full left-0 w-full glass-panel thin-divider p-6 flex flex-col gap-6 md:hidden"
           >
-            <Link href="/#il-viaggio" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Il Viaggio</Link>
+            <Link href="/chi-sono" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Chi sono</Link>
+            <Link href="/libro" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Libro</Link>
             <Link href="/dispositivi" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Dispositivi</Link>
-            <Link href="/autore" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>L'Autore</Link>
             <Link href="/materiali" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Materiali</Link>
           </motion.div>
         )}
