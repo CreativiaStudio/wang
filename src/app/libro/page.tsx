@@ -93,30 +93,30 @@ export default function LibroPage() {
         {/* 1. Cover / Manifesto */}
         <div className="glass-panel thin-divider p-8 md:p-16 mb-24 relative overflow-hidden">
           <div className="absolute inset-0 bg-gold/5 blur-3xl rounded-full" />
-          <div className="relative z-10 text-center space-y-6 md:space-y-8 font-serif text-lg md:text-2xl italic font-light text-foreground/80">
+          <div className="relative z-10 text-center space-y-2 md:space-y-3 font-serif text-lg md:text-2xl italic font-light text-foreground/80">
             <p>In uno spazio limitato,</p>
             <p>in cui regna il silenzio e l'ascolto,</p>
             <p className="text-gold">nascono creazioni che hanno la Missione di essere un Ponte verso l'Infinito.</p>
             
-            <div className="h-12" />
+            <div className="h-6 md:h-8" />
             
             <p>Oggetti realizzati a mano,</p>
             <p>con Presenza ed Intenzione,</p>
             <p>ispirati alle Tradizioni simboliche ed ai Percorsi interiori.</p>
             
-            <div className="h-12" />
+            <div className="h-6 md:h-8" />
             
             <p>Ogni strumento è un'offerta silenziosa.</p>
             <p>non è solo Artigianato,</p>
             <p>non è solo Spiritualità.</p>
             
-            <div className="h-12" />
+            <div className="h-6 md:h-8" />
             
             <p>Ogni gesto è un Rito,</p>
             <p>ogni forma è un Codice</p>
             <p>ogni oggetto è un Messaggio.</p>
             
-            <div className="h-12" />
+            <div className="h-8 md:h-10" />
             
             <p className="text-2xl md:text-3xl font-normal text-gradient-gold uppercase tracking-widest">Benvenuti nell'Officina Sacra.</p>
           </div>
