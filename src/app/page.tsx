@@ -170,13 +170,13 @@ export default function Home() {
 function getJourneyDescription(id: string) {
   switch (id) {
     case "genesa-crystal":
-      return "L'Eroe si affaccia al Mondo. La base strutturale dell'esistenza, il radicamento alla Terra e l'armonizzazione della forma pura.";
+      return "L'Eroe si affaccia al Mondo.";
     case "pentasfera":
-      return "L'Eroe intraprende il Viaggio. Entrando nel mare delle emozioni, la Pentasfera trasforma il sentire confuso in chiarezza del cuore, navigando il piano astrale.";
+      return "L'Eroe intraprende il Viaggio.";
     case "ipergenesa":
-      return "L'Eroe lascia le Acque e si inoltra nella regione del Fuoco. La quinta dimensione della mente, pura espressione e visione strategica.";
+      return "L'Eroe lascia le Acque e si inoltra nella regione del Fuoco.";
     case "unisfera":
-      return "L'Eroe unisce l'Acqua al Fuoco e giunge al compimento del suo Cammino. La sintesi assoluta dei tre piani, organo vitale dell'essere cosmico unificato.";
+      return "L'Eroe unisce l'Acqua al Fuoco dentro di sé, e giunge al compimento del suo Cammino.";
     default:
       return "";
   }
