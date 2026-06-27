@@ -47,9 +47,7 @@ export default function Home() {
           viewport={{ once: true, margin: "-100px" }}
         >
           <p>
-            In uno spazio limitato,<br/>
-            in cui regna il silenzio e l'ascolto,<br/>
-            nascono creazioni che hanno la Missione di essere un Ponte verso l'Infinito.
+            Nascono creazioni che hanno la Missione di essere un Ponte verso l'Infinito.
           </p>
           <p>
             Oggetti realizzati a mano,<br/>
@@ -68,9 +66,7 @@ export default function Home() {
             ogni forma è un Codice<br/>
             ogni oggetto è un Messaggio.
           </p>
-          <p className="text-xl md:text-3xl text-gold mt-12 pt-8">
-            Benvenuti nell'Officina Sacra.
-          </p>
+
         </motion.div>
       </section>
 
