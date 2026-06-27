@@ -142,16 +142,18 @@ export default function LibroPage() {
         </div>
 
         {/* 3. Indice */}
-        <div className="mb-32 max-w-3xl mx-auto">
+        <div className="mb-32 max-w-5xl mx-auto">
           <h2 className="font-serif text-3xl text-gradient-gold uppercase tracking-widest mb-12 text-center">Indice</h2>
-          <div className="glass-panel p-8 md:p-12 space-y-4 font-serif text-foreground/80">
-            {indexItems.map((item, idx) => (
-              <div key={idx} className={`flex items-end gap-2 ${item.title.toUpperCase() === item.title ? 'mt-8 mb-4 font-bold text-gold text-lg' : 'text-base font-light'}`}>
-                <span className="shrink-0">{item.title}</span>
-                <div className="grow border-b border-dotted border-white/20 mb-1" />
-                <span className="shrink-0 font-medium">{item.page}</span>
-              </div>
-            ))}
+          <div className="glass-panel p-8 md:p-12 font-serif text-foreground/80">
+            <div className="columns-1 md:columns-2 gap-12">
+              {indexItems.map((item, idx) => (
+                <div key={idx} className={`flex items-end gap-2 break-inside-avoid mb-3 ${item.title.toUpperCase() === item.title ? 'pt-6 pb-2 font-bold text-gold text-lg' : 'text-sm font-light'}`}>
+                  <span className="shrink-0 max-w-[85%] text-left leading-snug">{item.title}</span>
+                  <div className="grow border-b border-dotted border-white/20 mb-1" />
+                  <span className="shrink-0 font-medium">{item.page}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
