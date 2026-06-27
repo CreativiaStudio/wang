@@ -5,7 +5,8 @@
     "slug": "genesa-crystal",
     "image": "/Genesa_render.jpg",
     "plane": "Piano Fisico ed Eterico",
-    "function": "La Genesa riproduce il primo stato di equilibrio perfetto. È un organismo geometrico vivente che agisce sul piano Fisico e sul piano Eterico. Armonizza, ordina e riattiva l'energia vitale dell'ambiente e della persona.",
+    "shortDescription": "La Genesa riproduce il primo stato di equilibrio perfetto. È un organismo geometrico vivente che agisce sul piano Fisico e sul piano Eterico. Armonizza, ordina e riattiva l'energia vitale dell'ambiente e della persona.",
+    "function": "La Genesa riproduce il primo stato di equilibrio perfetto ed è una struttura che agisce sui piani Fisico ed Eterico. La sua funzione principale è quella di armonizzare, ordinare e riattivare l'energia vitale di persone e ambienti. È il dispositivo base che favorisce il radicamento alla terra, stabilizza il cambiamento e crea un campo ordinatore per sostenere la crescita.",
     "polarity": {
       "yin": {
         "name": "Genesa Yin",
@@ -30,7 +31,8 @@
     "slug": "pentasfera",
     "image": "/Pentasfera_render.jpg",
     "plane": "Piano Astrale",
-    "function": "La Pentasfera opera sul piano Astrale, la dimora delle emozioni. È un campo di risonanza che favorisce il bilanciamento emotivo e aiuta a trasformare le correnti caotiche in onde coerenti, portando chiarezza al cuore.",
+    "shortDescription": "La Pentasfera opera sul piano Astrale, la dimora delle emozioni. È un campo di risonanza che favorisce il bilanciamento emotivo e aiuta a trasformare le correnti caotiche in onde coerenti, portando chiarezza al cuore.",
+    "function": "La Pentasfera opera sul piano Astrale, che è la dimora delle emozioni e dei desideri. Funziona come un campo di risonanza che favorisce il bilanciamento emotivo, aiutando a trasformare le tensioni e le correnti caotiche in onde coerenti. Accompagna chi la usa a fare chiarezza nel cuore, alleggerendo gli spazi e cullando o liberando le emozioni.",
     "polarity": {
       "yin": {
         "name": "Pentasfera Yin",
@@ -55,7 +57,8 @@
     "slug": "ipergenesa",
     "image": "/IperGenesa_render.jpg",
     "plane": "Piano Mentale",
-    "function": "L'IperGenesa è una struttura di quinta dimensione che opera sul Piano Mentale. È uno strumento di allineamento tra il pensiero e la realtà, che attiva, orienta e ordina la mente, favorendo la lucidità e la visione interiore.",
+    "shortDescription": "L'IperGenesa è una struttura di quinta dimensione che opera sul Piano Mentale. È uno strumento di allineamento tra il pensiero e la realtà, che attiva, orienta e ordina la mente, favorendo la lucidità e la visione interiore.",
+    "function": "L'IperGenesa è una struttura complessa a cinque dimensioni che lavora sul Piano Mentale. È un vero e proprio strumento di allineamento tra il pensiero e la realtà: serve ad attivare, orientare e ordinare la mente. Separa il \"rumore\" dai pensieri coerenti, favorendo un'elevata lucidità intellettiva, l'organizzazione delle idee e l'intuizione profonda.",
     "polarity": {
       "yin": {
         "name": "IperGenesa Yin",
@@ -80,7 +83,8 @@
     "slug": "unisfera",
     "image": "/Unisfera_render.jpg",
     "plane": "Campo di Coscienza Integrato",
-    "function": "L'Unisfera è il portale supremo che racchiude e sintetizza tutte le geometrie precedenti. Integra corpo, emozioni e mente in un unico campo unificato. È il simbolo di un potenziale infinito che supporta la trasformazione e l'evoluzione multidimensionale.",
+    "shortDescription": "L'Unisfera è il portale supremo che racchiude e sintetizza tutte le geometrie precedenti. Integra corpo, emozioni e mente in un unico campo unificato. È il simbolo di un potenziale infinito che supporta la trasformazione e l'evoluzione multidimensionale.",
+    "function": "L'Unisfera è il portale supremo che racchiude e sintetizza in sé tutte le geometrie precedenti. Il suo scopo è lavorare sul piano della Coscienza Integrata, unendo corpo, emozioni e mente in un unico campo unificato. È uno strumento di connessione profonda che supporta la trasformazione personale, l'evoluzione multidimensionale e le pratiche spirituali più avanzate.",
     "polarity": {
       "yin": {
         "name": "Unisfera Yin (La Madre)",
