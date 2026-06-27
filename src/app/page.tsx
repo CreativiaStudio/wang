@@ -38,9 +38,9 @@ export default function Home() {
       </section>
 
       {/* Manifesto Section */}
-      <section className="py-24 md:py-40 relative flex items-center justify-center px-6">
+      <section className="pt-24 pb-12 md:pt-32 md:pb-16 relative flex items-center justify-center px-6">
         <motion.div 
-          className="max-w-3xl mx-auto text-center font-serif text-lg md:text-2xl leading-loose md:leading-loose text-foreground/80 italic space-y-8"
+          className="max-w-3xl mx-auto text-center font-serif text-lg md:text-2xl leading-[1.6] text-foreground/80 italic space-y-6"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
