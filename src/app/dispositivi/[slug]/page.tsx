@@ -5,7 +5,7 @@ import ProductConfigurator from "@/components/ProductConfigurator";
 import type { Metadata } from "next";
 
 interface PageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -40,8 +40,8 @@ export default async function ProductPage({ params }: PageProps) {
         {/* Header Section */}
         <div className="flex flex-col items-center text-center mb-16">
           <h1 className="text-5xl md:text-7xl font-serif text-gold mb-6 uppercase tracking-widest">{product.name}</h1>
-          <p className="text-xl text-white/60 italic font-serif max-w-2xl mb-6">{product.plane}</p>
-          <p className="text-lg text-white/80 font-light max-w-3xl leading-relaxed">{product.function}</p>
+          <p className="text-xl md:text-2xl text-gold/90 italic font-serif max-w-3xl mb-6 leading-relaxed">{product.heroVerse}</p>
+          <p className="text-lg text-white/60 font-light">{product.plane}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
@@ -65,6 +65,13 @@ export default async function ProductPage({ params }: PageProps) {
 
           {/* Info Column / Configurator */}
           <div className="flex flex-col">
+            <div className="space-y-6 mb-12">
+              {product.descriptionParagraphs.map((paragraph) => (
+                <p key={paragraph} className="text-lg text-white/70 font-light leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
             <div className="bg-[#0f1014] p-8 md:p-10 border border-white/5 rounded-md shadow-2xl">
                <ProductConfigurator product={product} />
             </div>

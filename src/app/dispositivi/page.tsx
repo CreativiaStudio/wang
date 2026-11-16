@@ -46,8 +46,8 @@ export default function DispositiviPage() {
                   {product.name}
                 </h2>
                 <p className="text-sm text-gold italic font-serif mb-4">{product.plane}</p>
-                <p className="text-foreground/60 text-sm font-light leading-relaxed flex-grow line-clamp-3">
-                  {product.shortDescription}
+                <p className="text-foreground/80 text-base italic font-serif leading-relaxed flex-grow">
+                  {product.heroVerse}
                 </p>
                 
                 <div className="mt-6 pt-4 thin-divider flex items-center justify-between">

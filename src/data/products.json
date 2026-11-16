@@ -7,12 +7,84 @@
     "plane": "Piano Fisico ed Eterico",
     "shortDescription": "La Genesa riproduce il primo stato di equilibrio perfetto. È un organismo geometrico vivente che agisce sul piano Fisico e sul piano Eterico. Armonizza, ordina e riattiva l'energia vitale dell'ambiente e della persona.",
     "function": "La Genesa riproduce il primo stato di equilibrio perfetto ed è una struttura che agisce sui piani Fisico ed Eterico. La sua funzione principale è quella di armonizzare, ordinare e riattivare l'energia vitale di persone e ambienti. È il dispositivo base che favorisce il radicamento alla terra, stabilizza il cambiamento e crea un campo ordinatore per sostenere la crescita.",
+    "heroVerse": "L’Eroe si affaccia al Mondo. Si lascia nutrire, radicare e accogliere dalla Terra, e respira per la prima volta il ritmo della Vita.",
+    "descriptionParagraphs": [
+      "La Genesa riproduce il primo stato di equilibrio perfetto da cui ogni forma di vita prende avvio. È collegata a quella Forza primordiale che genera e sostiene ogni evoluzione. È composta da quattro cerchi intrecciati che disegnano sulla sfera sei quadrati e otto triangoli.",
+      "È l’unione armonica di due solidi platonici: l’esaedro, simbolo della Terra, evoca il radicamento alla Madre; l’ottaedro, simbolo dell’Aria, richiama l’equilibrio, il respiro, l’espansione.",
+      "La Genesa è un organismo geometrico vivente, un portale delicato e pulsante che sostiene la Vita nella sua continua fioritura. Agisce sul piano Fisico, quello della struttura, e su quello Eterico, dove fluisce la Forza Vitale. Armonizza, ordina, riattiva. Smuove le energie stagnanti e riequilibra quelle caotiche.",
+      "Posta in casa, giardino, negozio o luogo di lavoro, armonizza il flusso vitale con la sua sola presenza, portando coerenza e stabilità silenziosa. Può accompagnare il riposo di bambini, adulti e anziani, animali e piante. La disposizione interna di rimedi omeopatici e la luce emanata da lampade di sale, selenite, quarzo, ametista o altri cristalli, accelerano e guidano naturalmente la corrente eterica."
+    ],
+    "functions": [
+      {
+        "title": "Armonizzazione degli ambienti",
+        "description": "Crea un equilibrio che favorisce la vitalità degli spazi abitativi e lavorativi."
+      },
+      {
+        "title": "Riequilibrio energetico personale",
+        "description": "Favorisce l’allineamento sottile del corpo, portando equilibrio e benessere."
+      },
+      {
+        "title": "Supporto alla crescita",
+        "description": "Promuove una crescita sana e armoniosa di esseri viventi, anche di piante e animali, rispettando i ritmi naturali."
+      },
+      {
+        "title": "Protezione da campi elettromagnetici",
+        "description": "Riduce l’influenza negativa delle radiazioni elettromagnetiche sugli esseri viventi."
+      },
+      {
+        "title": "Armonizzazione di nodi geopatogeni",
+        "description": "Riequilibra le forze sottili legate ai nodi geopatogeni."
+      }
+    ],
     "dimensions": [
-      { "size": "14,6 cm", "scope": "uso personale/altare", "description": "Ideale per il campo personale, comodini o altari. Supporta il riequilibrio quotidiano e la meditazione." },
-      { "size": "23,6 cm", "scope": "piccoli spazi/comodino", "description": "Perfetta per spazi personali (scrivania, angoli sacri) e per armonizzare piccoli nodi geopatogeni domestici." },
-      { "size": "38,2 cm", "scope": "stanze/ambienti lavorativi", "description": "Adatta per armonizzare stanze o ambienti lavorativi, agendo in profondità sul campo eterico." },
-      { "size": "61,8 cm", "scope": "ambienti medio-grandi/giardini", "description": "Pensata per ambienti medio-grandi, sale o giardini. Sostiene la vitalità di persone, piante e animali." },
-      { "size": "100 cm", "scope": "larga scala/orti energetici", "description": "Irradia un campo ampio su larga scala. Ideale per orti energetici e offre la possibilità di entrarvi fisicamente per un allineamento profondo." }
+      {
+        "size": "14,6 cm",
+        "scope": "Ambito personale",
+        "points": [
+          "Ambito personale - vicino al corpo o su piccoli altari",
+          "Supporta il radicamento e il riequilibrio sottile quotidiano",
+          "Adatta alla meditazione, alla protezione personale o al trattamento di oggetti specifici"
+        ]
+      },
+      {
+        "size": "23,6 cm",
+        "scope": "Spazi personali",
+        "points": [
+          "Spazi personali (scrivania, comodino, angolo sacro)",
+          "Ottima per armonizzare piccoli nodi geopatogeni in ambito domestico",
+          "Trattamento energetico localizzato"
+        ]
+      },
+      {
+        "size": "38,2 cm",
+        "scope": "Stanze e ambienti lavorativi",
+        "points": [
+          "Armonizzazione di stanze o ambienti lavorativi",
+          "Agisce in profondità sul piano eterico, stabilizzando il campo",
+          "Postazione di riposo per animali domestici di piccola taglia",
+          "Utile in geobiologia su nodi di Hartmann, Curry…"
+        ]
+      },
+      {
+        "size": "61,8 cm",
+        "scope": "Ambienti medio-grandi",
+        "points": [
+          "Adatta per ambienti medio-grandi, asili, giardini, palestre, centri di benessere",
+          "Rafforza l’interazione con l’ambiente e sostiene la vitalità di persone, piante e animali",
+          "Postazione di riposo per animali domestici di media taglia",
+          "Utile in geobiologia per armonizzare campi disturbati esterni o multipli"
+        ]
+      },
+      {
+        "size": "100 cm",
+        "scope": "Larga scala / Giardini sacri",
+        "points": [
+          "Agisce su larga scala, rendendo l’ambiente armonico, ampio e stabile",
+          "Ideale in giardini sacri, orti, luoghi di pratica o eventi spirituali",
+          "Lavora su linee telluriche, falde acquifere e reti energetiche del luogo",
+          "Possibilità di entrare fisicamente, favorendo un allineamento profondo."
+        ]
+      }
     ]
   },
   {
@@ -23,12 +95,83 @@
     "plane": "Piano Astrale",
     "shortDescription": "La Pentasfera opera sul piano Astrale, la dimora delle emozioni. È un campo di risonanza che favorisce il bilanciamento emotivo e aiuta a trasformare le correnti caotiche in onde coerenti, portando chiarezza al cuore.",
     "function": "La Pentasfera opera sul piano Astrale, che è la dimora delle emozioni e dei desideri. Funziona come un campo di risonanza che favorisce il bilanciamento emotivo, aiutando a trasformare le tensioni e le correnti caotiche in onde coerenti. Accompagna chi la usa a fare chiarezza nel cuore, alleggerendo gli spazi e cullando o liberando le emozioni.",
+    "heroVerse": "L’Eroe intraprende il Viaggio. Scopre i flussi invisibili dentro di sé. Ogni corrente rivela un frammento della sua Anima. Con la bussola, impara a muoversi nelle Acque.",
+    "descriptionParagraphs": [
+      "La Pentasfera opera sul piano Astrale: dimora delle emozioni, dei desideri e dei moti dei mari interiori. È l’incontro tra l’Icosaedro, associato all’Acqua, e il Dodecaedro, legato all’Etere, il quinto elemento.",
+      "Dodici pentagoni, come dodici specchi dell’essere umano nei suoi dodici ruoli. Dodici volti del Sé che risuonano con i segni zodiacali, dodici stazioni interiori da attraversare, comprendere, armonizzare.",
+      "È un campo di risonanza che favorisce l’accordo emotivo e aiuta a rendere coerenti le correnti caotiche. Accompagna il viaggiatore nel passaggio dal sentire confuso a un’emozione capace di trovare ritmo ed espressione."
+    ],
+    "functions": [
+      {
+        "title": "Armonizzazione delle emozioni",
+        "description": "Aiuta a equilibrare e gestire le emozioni, favorendo la serenità e il benessere interiore."
+      },
+      {
+        "title": "Pulizia energetica degli ambienti",
+        "description": "Purifica e riequilibra il clima emotivo degli spazi, favorendo la circolazione delle energie stagnanti."
+      },
+      {
+        "title": "Supporto all’elaborazione di vissuti e blocchi emotivi",
+        "description": "Accompagna il processo di elaborazione emotiva, favorendo il rilascio di tensioni e blocchi."
+      },
+      {
+        "title": "Creazione di uno spazio protetto per pratiche interiori",
+        "description": "Crea un ambiente sicuro e protetto per meditazione, introspezione e crescita spirituale."
+      },
+      {
+        "title": "Accompagnamento nei trattamenti energetici o nei cerchi di parola",
+        "description": "Sostiene i processi di elaborazione emotiva, favorendo un flusso più armonico durante le pratiche."
+      }
+    ],
     "dimensions": [
-      { "size": "24,3 cm", "scope": "personale/scrivania", "description": "Ideale per scrivanie o per accompagnare il sonno sul comodino. Adatta al trattamento di oggetti personali." },
-      { "size": "39,3 cm", "scope": "piccoli spazi di meditazione", "description": "Perfetta per il lavoro emozionale personale, piccoli spazi di meditazione e la pulizia energetica quotidiana." },
-      { "size": "63,7 cm", "scope": "piccoli gruppi/studi", "description": "Ottima per piccoli gruppi, studi terapeutici, cerchi di parola o costellazioni familiari." },
-      { "size": "103 cm", "scope": "campo esteso/cerimonie", "description": "Crea un campo esteso e sicuro per gruppi, ideali per seminari, rituali di passaggio o lavoro sui traumi." },
-      { "size": "166,7 cm", "scope": "spazi naturali/grandi gruppi", "description": "Strumento potente per grandi spazi naturali. Favorisce la catarsi emotiva collettiva e permette di entrarvi fisicamente." }
+      {
+        "size": "24,3 cm",
+        "scope": "Uso personale",
+        "points": [
+          "Ideale per uso personale, su altari, scrivanie o comodini",
+          "Adatta al trattamento energetico di oggetti personali o elisir emozionali",
+          "Può essere usata per accompagnare il sonno o il risveglio con dolcezza"
+        ]
+      },
+      {
+        "size": "39,3 cm",
+        "scope": "Lavoro emozionale",
+        "points": [
+          "Adatta al lavoro emozionale personale o in piccoli spazi di meditazione",
+          "Supporta pratiche di rilascio emotivo e “pulizia” quotidiana",
+          "Ottima per cerchi ristretti, lavoro interiore o accompagnamento individuale"
+        ]
+      },
+      {
+        "size": "63,7 cm",
+        "scope": "Piccoli gruppi / Studi",
+        "points": [
+          "Si presta al lavoro in piccoli gruppi o studi di lavoro interiore",
+          "Crea uno spazio protetto per cerchi di parola, counseling, costellazioni familiari",
+          "Utile in ambienti dedicati al rilascio di memorie emotive collettive",
+          "Indicata in spazi dedicati alle arti espressive, come scuole di danza, teatro e canto"
+        ]
+      },
+      {
+        "size": "103 cm",
+        "scope": "Gruppi / Cerimonie",
+        "points": [
+          "Per gruppi, cerchi o ambienti di riequilibrio emozionale",
+          "Ideale per seminari di gruppo, percorsi di elaborazione emotiva, riti di passaggio",
+          "Stabilizza il campo emozionale collettivo durante cerimonie, pratiche spirituali o eventi",
+          "Aiuta a creare un contenitore sicuro per la vulnerabilità condivisa"
+        ]
+      },
+      {
+        "size": "166,7 cm",
+        "scope": "Grandi spazi / Cerchi rituali",
+        "points": [
+          "Strumento potente per grandi spazi naturali, cerchi rituali, guarigione collettiva",
+          "Favorisce la catarsi e la trasmutazione di grandi flussi emotivi",
+          "Sostiene l’ascolto e la coesione del gruppo",
+          "Possibilità di entrare fisicamente, favorendo un allineamento profondo."
+        ]
+      }
     ]
   },
   {
@@ -39,12 +182,85 @@
     "plane": "Piano Mentale",
     "shortDescription": "L'IperGenesa è una struttura di quinta dimensione che opera sul Piano Mentale. È uno strumento di allineamento tra il pensiero e la realtà, che attiva, orienta e ordina la mente, favorendo la lucidità e la visione interiore.",
     "function": "L'IperGenesa è una struttura complessa a cinque dimensioni che lavora sul Piano Mentale. È un vero e proprio strumento di allineamento tra il pensiero e la realtà: serve ad attivare, orientare e ordinare la mente. Separa il \"rumore\" dai pensieri coerenti, favorendo un'elevata lucidità intellettiva, l'organizzazione delle idee e l'intuizione profonda.",
+    "heroVerse": "L’Eroe lascia le Acque e si inoltra nella regione del Fuoco. Non è più il tempo del sentire, ma del pensare. Con il compasso in mano, apprende l’arte della direzione: non è più divorato dal Fuoco, ma lo guida.",
+    "descriptionParagraphs": [
+      "L’IperGenesa opera sul piano Mentale inferiore e, in potenza, su quello superiore: il primo è il piano del pensiero razionale; il secondo è il piano della Causa profonda. Uno è la Mente che osserva il mondo e l’altro è la Mente che osserva sé stessa.",
+      "Appartiene al regno delle idee, dell’intenzione, dell’intelligenza: il luogo attraverso cui si accede alla scintilla luminosa, quella parte immortale e consapevole che arde oltre lo Spazio e il Tempo.",
+      "La sua geometria è più complessa, più profonda, più sottile. Dove il campo d’azione della Genesa è bidimensionale e quello della Pentasfera tridimensionale, l’IperGenesa è una struttura che opera in una realtà di quinta dimensione.",
+      "Attiva, orienta, ordina. È uno strumento di allineamento tra il pensiero e la realtà. Dodici pentacoli, come dodici specchi del cosmo nella Coscienza umana, dodici astri che risuano tra il giorno e la notte, da contemplare come il navigante contempla le stelle, per riconoscere il proprio posto nell’ordine cosmico."
+    ],
+    "functions": [
+      {
+        "title": "Rafforzamento della chiarezza mentale",
+        "description": "Migliora la precisione del pensiero e aiuta a discernere con maggiore lucidità tra le diverse opzioni."
+      },
+      {
+        "title": "Organizzazione delle idee",
+        "description": "Aiuta a organizzare e dirigere il flusso mentale, favorendo la concentrazione e la gestione delle priorità."
+      },
+      {
+        "title": "Attivazione della visione strategica",
+        "description": "Potenzia la capacità di formulare obiettivi chiari e di visualizzare soluzioni a lungo termine."
+      },
+      {
+        "title": "Allineamento tra mente e azione",
+        "description": "Favorisce l’integrazione tra pensiero razionale, intuizione e applicazione pratica."
+      },
+      {
+        "title": "Sostegno nelle pratiche mentali avanzate",
+        "description": "Facilita lo studio, la meditazione profonda e le pratiche di ascolto intuitivo."
+      }
+    ],
     "dimensions": [
-      { "size": "24,3 cm", "scope": "studi/lavoro mentale", "description": "Ideale per altari dedicati al lavoro mentale, per stimolare la chiarezza durante la scrittura o lo studio." },
-      { "size": "39,3 cm", "scope": "progettazione/canalizzazione", "description": "Adatta a studi professionali e spazi di progettazione. Supporta la canalizzazione e la scrittura ispirata." },
-      { "size": "63,7 cm", "scope": "team creativi/problem solving", "description": "Perfetta in ambienti di co-creazione, per team creativi e sessioni di problem solving o brainstorming." },
-      { "size": "103 cm", "scope": "meditazioni guidate/laboratori", "description": "Crea un campo esteso per laboratori filosofici, meditazioni guidate e per la ricezione di intuizioni profonde." },
-      { "size": "166,7 cm", "scope": "eventi su larga scala/ritiri", "description": "Campo mentale potente per eventi su larga scala o cerchi di visione collettiva. Possibilità di entrarvi fisicamente." }
+      {
+        "size": "24,3 cm",
+        "scope": "Scrivanie e studi",
+        "points": [
+          "Ideale per scrivanie, studi o altari dedicati al lavoro mentale e creativo",
+          "Stimola la chiarezza del pensiero durante la scrittura, lo studio o la progettazione",
+          "Favorisce la lucidità prima di colloqui, esami o attività strategiche"
+        ]
+      },
+      {
+        "size": "39,3 cm",
+        "scope": "Studi professionali",
+        "points": [
+          "Adatta a studi professionali, sale di lettura o spazi di progettazione",
+          "Supporta chi pratica canalizzazione, scrittura ispirata o studio esoterico",
+          "Favorisce l’elaborazione di strategie, visioni a lungo termine e pianificazioni complesse"
+        ]
+      },
+      {
+        "size": "63,7 cm",
+        "scope": "Co-creazione e team",
+        "points": [
+          "Ideale in ambienti di cocreazione, studi o spazi condivisi per lo sviluppo di idee evolutive",
+          "Aiuta a stabilire un ambiente mentale chiaro e coeso in contesti complessi",
+          "Utile per team creativi, sessioni di problem solving o brainstorming evolutivi"
+        ]
+      },
+      {
+        "size": "103 cm",
+        "scope": "Pratiche collettive",
+        "points": [
+          "Campo esteso per pratiche mentali collettive, meditazioni guidate, laboratori didattici",
+          "Ottima per facilitare la visione strategica in gruppi o associazioni orientate al cambiamento",
+          "Crea un ambiente che stimola l’intelligenza superiore e la ricezione di intuizioni",
+          "Rafforza i processi di comprensione collettiva e la coerenza tra i partecipanti"
+        ]
+      },
+      {
+        "size": "166,7 cm",
+        "scope": "Eventi / Visione collettiva",
+        "points": [
+          "Per eventi su larga scala o cerchi di visione collettiva",
+          "Supporta lavori profondi sull’intento collettivo e sull’architettura del pensiero condiviso",
+          "Ottima in contesti di insegnamento avanzato o cerimonie di attivazione mentale",
+          "Stabilizza grandi flussi di informazione e facilita l’accesso a livelli elevati di Coscienza",
+          "Favorisce la risonanza con l’intelligenza cosmica e una visione sincronica del tutto.",
+          "Possibilità di entrare fisicamente, favorendo un allineamento profondo."
+        ]
+      }
     ]
   },
   {
@@ -55,12 +271,80 @@
     "plane": "Campo di Coscienza Integrato",
     "shortDescription": "L'Unisfera è il portale supremo che racchiude e sintetizza tutte le geometrie precedenti. Integra corpo, emozioni e mente in un unico campo unificato. È il simbolo di un potenziale infinito che supporta la trasformazione e l'evoluzione multidimensionale.",
     "function": "L'Unisfera è il portale supremo che racchiude e sintetizza in sé tutte le geometrie precedenti. Il suo scopo è lavorare sul piano della Coscienza Integrata, unendo corpo, emozioni e mente in un unico campo unificato. È uno strumento di connessione profonda che supporta la trasformazione personale, l'evoluzione multidimensionale e le pratiche spirituali più avanzate.",
+    "heroVerse": "L’Eroe unisce l’Acqua al Fuoco dentro di sé e ritrova l’unità. Tutte le Vie percorse finora si fondono in una sola Danza. Il suo equilibrio è la chiave di lettura del Mondo, la mappa con cui può navigare le infinite realtà che ora gli appartengono.",
+    "descriptionParagraphs": [
+      "L’Unisfera è un portale che racchiude e fonde tutte le geometrie precedenti. È la grande struttura dell’Anima prima della nascita, dove tutto è già tracciato, ma nulla è ancora entrato nella carne. La sua geometria vibra all’unisono con l’Universo, creando un legame profondo tra l’individuo e il Cosmo.",
+      "I dodici pentacoli si uniscono ai rispettivi pentagoni e divengono chiavi dell’Anima universale: dodici archetipi che risuonano nel cuore dell’essere; dodici sentieri interiori da esplorare, ogni volta più profondamente, per divenire ciò che si è chiamati ad essere.",
+      "Raccoglie e integra le energie finora trattate in un campo unificato, facilitando l’evoluzione multidimensionale. Supporta la trasmutazione, attivando profondi intenti e offrendo il sostegno necessario per collegarsi alle dimensioni superiori. Funziona come Ponte tra i Mondi, guidando la consapevolezza verso la trascendenza e la manifestazione di nuove forme di Coscienza attiva."
+    ],
+    "functions": [
+      {
+        "title": "Armonizzazione globale dell’essere",
+        "description": "Integra corpo, emozioni e mente, creando equilibrio tra tutti i piani dell’Essere."
+      },
+      {
+        "title": "Sostegno alla trasformazione personale e collettiva",
+        "description": "Favorisce il cambiamento evolutivo sia individuale sia collettivo."
+      },
+      {
+        "title": "Attivazione di intenti profondi e percorsi spirituali",
+        "description": "Potenzia la capacità di focalizzarsi su obiettivi spirituali e di direzionare consapevolmente le Pratiche."
+      },
+      {
+        "title": "Sostegno alle pratiche di canalizzazione e trasmissione spirituale",
+        "description": "Facilita la connessione con dimensioni superiori e l’accesso a informazioni spirituali."
+      },
+      {
+        "title": "Connessione al campo della Coscienza superiore",
+        "description": "Rafforza il legame con la Coscienza universale, favorendo l’accesso a stati superiori di consapevolezza."
+      }
+    ],
     "dimensions": [
-      { "size": "24,3 cm", "scope": "allineamento spirituale", "description": "Ideale per altari e spazi personali. Ottima per letture oracolari e pratiche quotidiane di allineamento spirituale." },
-      { "size": "39,3 cm", "scope": "sale yoga/introspezione", "description": "Creata per ambienti di meditazione, sale yoga o stanze dedicate alla profonda introspezione." },
-      { "size": "63,7 cm", "scope": "trattamenti energetici", "description": "Adatta a cerchi spirituali, trattamenti energetici e per facilitare processi di visione condivisa." },
-      { "size": "103 cm", "scope": "luoghi sacri/ancoraggio frequenze", "description": "Ottima nei luoghi sacri o dedicati alla preghiera collettiva, per ancorare nuove frequenze spirituali." },
-      { "size": "166,7 cm", "scope": "lavori planetari/portale di connessione", "description": "Dispositivo per lavori collettivi su larga scala o reti planetarie. Agisce come portale di connessione in cui si può entrare fisicamente." }
+      {
+        "size": "24,3 cm",
+        "scope": "Altari e spazi personali",
+        "points": [
+          "Ideale su altari o in spazi personali per pratiche quotidiane di allineamento spirituale",
+          "Favorisce l’integrazione tra mente, cuore e spirito nel quotidiano",
+          "Ottima durante rituali personali, journaling spirituale o letture oracolari"
+        ]
+      },
+      {
+        "size": "39,3 cm",
+        "scope": "Meditazione e sale yoga",
+        "points": [
+          "Perfetta per ambienti di meditazione, sale yoga o stanze di introspezione",
+          "Crea uno spazio protetto per pratiche di risveglio della Coscienza",
+          "Favorisce il rilascio di blocchi interiori e l’accesso a stati di presenza elevata"
+        ]
+      },
+      {
+        "size": "63,7 cm",
+        "scope": "Cerchi spirituali",
+        "points": [
+          "Adatta a cerchi spirituali, trattamenti sottili o lavori di gruppo",
+          "Sostiene il passaggio a nuove fasi evolutive individuali e collettive",
+          "Ottima per facilitare processi di visione condivisa, sogni collettivi o Lavori profondi"
+        ]
+      },
+      {
+        "size": "103 cm",
+        "scope": "Luoghi sacri",
+        "points": [
+          "Aiuta ad ancorare nuove frequenze nel corpo, nella mente e nell’ambiente",
+          "Crea un ponte stabile tra la Coscienza superiore e l’esperienza terrena",
+          "Ottima nei luoghi sacri o in spazi dedicati alla preghiera collettiva"
+        ]
+      },
+      {
+        "size": "166,7 cm",
+        "scope": "Lavori su larga scala",
+        "points": [
+          "Dispositivo per lavori collettivi su larga scala o su reti planetarie",
+          "Agisce come portale di connessione tra l’intelligenza cosmica e le reti terrestri",
+          "Adatta a templi, giardini sacri, comunità spirituali e progetti di Coscienza evolutiva"
+        ]
+      }
     ]
   }
 ]

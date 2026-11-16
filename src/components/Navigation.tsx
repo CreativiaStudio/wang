@@ -60,9 +60,11 @@ export default function Navigation() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-16 items-center text-sm uppercase tracking-widest text-foreground/70">
-          <Link href="/chi-sono" className="hover:text-gold gold-glow transition-all">Chi sono</Link>
-          <Link href="/libro" className="hover:text-gold gold-glow transition-all">Libro</Link>
           <Link href="/dispositivi" className="hover:text-gold gold-glow transition-all">Dispositivi</Link>
+          <Link href="/materiali" className="hover:text-gold gold-glow transition-all">Materiali</Link>
+          <Link href="/libro" className="hover:text-gold gold-glow transition-all">Libro</Link>
+          <Link href="/chi-sono" className="hover:text-gold gold-glow transition-all">Chi sono?</Link>
+          <Link href="/realizzazioni" className="hover:text-gold gold-glow transition-all">Realizzazioni</Link>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -85,9 +87,11 @@ export default function Navigation() {
             transition={{ duration: 0.3 }}
             className="absolute top-full left-0 w-full glass-panel thin-divider p-6 flex flex-col gap-6 md:hidden"
           >
-            <Link href="/chi-sono" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Chi sono</Link>
-            <Link href="/libro" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Libro</Link>
             <Link href="/dispositivi" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Dispositivi</Link>
+            <Link href="/materiali" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Materiali</Link>
+            <Link href="/libro" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Libro</Link>
+            <Link href="/chi-sono" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Chi sono?</Link>
+            <Link href="/realizzazioni" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Realizzazioni</Link>
           </motion.div>
         )}
       </AnimatePresence>

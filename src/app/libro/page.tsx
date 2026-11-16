@@ -1,12 +1,49 @@
-import type { Metadata } from "next";
-import Flipbook from "@/components/Flipbook";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Geometrie Consapevoli - Il Libro | Wang Officina Sacra",
-  description: "Un'opera di sintesi tra arte, geometria sacra, spiritualità ed esperienza artigianale.",
-};
+import { useEffect, useState } from "react";
+import Flipbook from "@/components/Flipbook";
+import LibroModals from "@/components/LibroModals";
+
+type ModalName = "sinossi" | "indice";
 
 export default function LibroPage() {
+  const [activeModal, setActiveModal] = useState<ModalName | null>(null);
+  const [selectedPreview, setSelectedPreview] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!activeModal) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+
+      if (selectedPreview) {
+        setSelectedPreview(null);
+      } else {
+        setActiveModal(null);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [activeModal, selectedPreview]);
+
+  const openModal = (modal: ModalName) => {
+    setSelectedPreview(null);
+    setActiveModal(modal);
+  };
+
+  const closeModal = () => {
+    setSelectedPreview(null);
+    setActiveModal(null);
+  };
+
   const indexItems = [
     { title: "Chi sono?", page: "4" },
     { title: "Nota sulle fonti", page: "4" },
@@ -121,6 +158,9 @@ export default function LibroPage() {
             <p className="text-2xl md:text-3xl font-normal text-gradient-gold uppercase tracking-widest">Benvenuti nell'Officina Sacra.</p>
           </div>
         </div>
+
+        {/* Pulsanti interattivi Sinossi e Indice */}
+        <LibroModals indexItems={indexItems} bookImages={bookImages} />
 
         {/* 2. Sinossi */}
         <div className="mb-32">

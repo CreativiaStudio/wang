@@ -1,9 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import products from "@/data/products.json";
-import Image from "next/image";
 import { motion } from "framer-motion";
+
+const journeyLinks = [
+  { href: "/dispositivi", label: "Dispositivi" },
+  { href: "/materiali", label: "Materiali" },
+  { href: "/libro", label: "Libro" },
+  { href: "/chi-sono", label: "Chi sono?" },
+  { href: "/realizzazioni", label: "Realizzazioni" },
+] as const;
 
 export default function Home() {
   return (
@@ -12,172 +18,109 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-[url('/hero_bg_clean.jpg')] bg-cover bg-center opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/0" />
-        
-        <motion.div 
+
+        <motion.div
           className="relative z-10 container mx-auto px-6 text-center flex flex-col items-center glass-panel p-12 rounded-2xl max-w-4xl mt-32"
-          style={{ backgroundColor: 'rgba(10, 10, 10, 0.75)' }}
+          style={{ backgroundColor: "rgba(10, 10, 10, 0.75)" }}
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
           viewport={{ once: true }}
         >
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-serif text-gradient-gold mb-6 uppercase tracking-wider md:tracking-widest leading-tight">
-            Benvenuti <br /> nell'officina sacra.
+            Benvenuti <br /> nell’Officina Sacra.
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-foreground/80 font-light max-w-2xl mx-auto mb-12">
-            In uno spazio limitato, dove regna il silenzio e l'ascolto.
+            In uno spazio limitato, in cui regnano il silenzio e l’ascolto, vengono al mondo creazioni nate per essere un Ponte verso l’Infinito.
           </p>
-          <Link 
-            href="#il-viaggio" 
+          <Link
+            href="#manifesto"
+            aria-label="Scorri al manifesto"
             className="group flex flex-col items-center gap-4 text-gold hover:text-white transition-colors duration-500"
           >
-            <span className="text-sm uppercase tracking-widest font-serif gold-text">Inizia il Viaggio</span>
-            <div className="w-px h-16 bg-gold group-hover:bg-white transition-colors duration-500" />
+            <span className="text-sm uppercase tracking-widest font-serif text-gold group-hover:text-white transition-colors duration-500">Scorri</span>
+            <svg
+              className="w-6 h-6 transition-transform duration-500 group-hover:translate-y-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m0 0l-6-6m6 6l6-6" />
+            </svg>
           </Link>
         </motion.div>
       </section>
 
       {/* Manifesto Section */}
-      <section className="pt-24 pb-12 md:pt-32 md:pb-16 relative flex items-center justify-center px-6">
-        <motion.div 
-          className="max-w-3xl mx-auto text-center font-serif text-lg md:text-2xl leading-[1.6] text-foreground/80 italic space-y-6"
+      <section id="manifesto" className="pt-24 pb-12 md:pt-32 md:pb-16 relative flex items-center justify-center px-6 scroll-mt-24">
+        <motion.div
+          className="max-w-3xl mx-auto text-center font-serif text-lg md:text-2xl leading-[1.6] text-foreground/80 italic space-y-10"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
           viewport={{ once: true, margin: "-100px" }}
         >
           <p>
-            Le creazioni hanno la Missione di essere un Ponte verso l'Infinito.
+            Non è solo Artigianato.<br />
+            Non è solo Spiritualità.<br />
+            Ogni gesto è un Rito.<br />
+            Ogni forma è un Codice.<br />
+            Ogni creazione è un Messaggio.
           </p>
           <p>
-            Oggetti realizzati a mano,<br/>
-            con Presenza ed Intenzione,<br/>
-            ispirati alle Tradizioni simboliche ed ai Percorsi interiori.
+            Ogni strumento è un’offerta silenziosa.<br />
+            Oggetti realizzati a mano, con Presenza e Intenzione, ispirati alle Tradizioni simboliche e ai Percorsi interiori.
           </p>
-          <p>
-            Ogni strumento è un'offerta silenziosa.
-          </p>
-          <p>
-            non è solo Artigianato,<br/>
-            non è solo Spiritualità.
-          </p>
-          <p>
-            Ogni gesto è un Rito,<br/>
-            ogni forma è un Codice<br/>
-            ogni oggetto è un Messaggio.
-          </p>
-
         </motion.div>
       </section>
 
-      {/* Il Viaggio dell'Eroe (Scroll-telling) */}
-      <section id="il-viaggio" className="py-32 md:py-48">
-        {products.map((product, index) => (
-          <div 
-            key={product.id} 
-            className="min-h-screen flex items-center py-32"
+      {/* Inizia il viaggio */}
+      <section className="py-24 md:py-32 px-6">
+        <div className="container mx-auto max-w-7xl flex flex-col items-center">
+          <motion.div
+            className="flex flex-col items-center"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
+            viewport={{ once: true, margin: "-100px" }}
           >
-            <div className={`container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-24 items-center ${index % 2 !== 0 ? 'md:grid-flow-col-dense' : ''}`}>
-              
-              {/* Text Content */}
-              <motion.div 
-                className={`flex flex-col gap-8 glass-panel p-10 rounded-2xl ${index % 2 !== 0 ? 'md:col-start-2' : ''}`}
-                initial={{ opacity: 0, y: 100 }}
+            <h2 className="text-4xl md:text-6xl font-serif text-gradient-gold text-center uppercase tracking-wider">Inizia il viaggio</h2>
+            <div className="w-px h-16 bg-gold my-10" aria-hidden="true" />
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 w-full">
+            {journeyLinks.map((link, index) => (
+              <motion.div
+                key={link.href}
+                className="h-full"
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
-                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1], delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-50px" }}
               >
-                <div className="flex items-center gap-4 mb-2">
-                  <span className="text-gold font-serif text-xl gold-text">Capitolo {index + 1}</span>
-                  <div className="h-px bg-gold/30 flex-grow" />
-                </div>
-                
-                {/* Mobile Image */}
-                <div className="md:hidden relative aspect-square flex items-center justify-center py-4 w-full max-w-[260px] mx-auto">
-                  <div className="absolute inset-0 bg-gold/5 rounded-full blur-2xl opacity-30 mix-blend-screen" />
-                  <motion.div
-                    animate={{ y: [-5, 5, -5] }}
-                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                    className="relative z-10 w-full h-full flex items-center justify-center"
-                  >
-                    {product.image && (
-                      <Image 
-                        src={product.image} 
-                        alt={product.name}
-                        width={300}
-                        height={300}
-                        className="object-contain drop-shadow-gold"
-                      />
-                    )}
-                  </motion.div>
-                </div>
-
-                <h2 className="text-4xl md:text-6xl font-serif text-gradient-gold">{product.name}</h2>
-                <h3 className="text-2xl text-gold italic font-serif mb-4">{product.plane}</h3>
-                
-                <p className="text-foreground/80 leading-relaxed font-light text-xl">
-                  {getJourneyDescription(product.id)}
-                </p>
-
-                <p className="text-foreground/60 text-base border-l-2 border-gold/40 pl-6 my-6 italic">
-                  {product.function}
-                </p>
-
-                <Link 
-                  href={`/dispositivi/${product.slug}`}
-                  className="inline-flex items-center gap-3 text-gold hover:text-white transition-colors uppercase tracking-widest text-sm mt-6 group w-fit"
+                <Link
+                  href={link.href}
+                  className="group glass-panel thin-divider gold-glow flex flex-col items-center justify-center gap-8 h-full min-h-48 p-8 rounded-2xl text-center text-gold hover:text-white transition-all duration-500 hover:-translate-y-1"
                 >
-                  Scopri il Dispositivo
-                  <svg className="w-5 h-5 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                  <span className="font-serif text-xl uppercase tracking-widest text-gradient-gold">{link.label}</span>
+                  <svg
+                    className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 12h14m0 0l-6-6m6 6l-6 6" />
+                  </svg>
                 </Link>
               </motion.div>
-
-              {/* Visual Content */}
-              <motion.div 
-                className="hidden md:flex relative aspect-square items-center justify-center p-8"
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 }}
-                viewport={{ once: true, margin: "-100px" }}
-              >
-                <div className="absolute inset-0 bg-gold/5 rounded-full blur-3xl opacity-30 mix-blend-screen" />
-                <motion.div
-                  animate={{ y: [-10, 10, -10] }}
-                  transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                  className="relative z-10 w-full h-full flex items-center justify-center"
-                >
-                  {product.image && (
-                    <Image 
-                      src={product.image} 
-                      alt={product.name}
-                      width={600}
-                      height={600}
-                      className="object-contain drop-shadow-gold"
-                    />
-                  )}
-                </motion.div>
-              </motion.div>
-              
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
       </section>
-
     </div>
   );
-}
-
-function getJourneyDescription(id: string) {
-  switch (id) {
-    case "genesa-crystal":
-      return "L'Eroe si affaccia al Mondo.";
-    case "pentasfera":
-      return "L'Eroe intraprende il Viaggio.";
-    case "ipergenesa":
-      return "L'Eroe lascia le Acque e si inoltra nella regione del Fuoco.";
-    case "unisfera":
-      return "L'Eroe unisce l'Acqua al Fuoco dentro di sé, e giunge al compimento del suo Cammino.";
-    default:
-      return "";
-  }
 }
