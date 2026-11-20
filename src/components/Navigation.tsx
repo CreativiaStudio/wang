@@ -1,10 +1,18 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import WangLogoModal from "./WangLogoModal";
+
+const navigationItems = [
+  { href: "/dispositivi", label: "Dispositivi" },
+  { href: "/materiali", label: "Materiali" },
+  { href: "/libro", label: "Libro" },
+  { href: "/chi-sono", label: "Chi sono?" },
+  { href: "/realizzazioni", label: "Realizzazioni" },
+] as const;
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,7 +25,7 @@ export default function Navigation() {
         setIsMobileMenuOpen(false);
       }
     }
-    
+
     if (isMobileMenuOpen) {
       document.addEventListener("mousedown", handleClickOutside);
     }
@@ -51,20 +59,26 @@ export default function Navigation() {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <div className="flex items-center gap-4 group transition-all">
-          <WangLogoModal />
-          <Link href="/" className="font-serif text-xl tracking-widest uppercase text-gradient-gold hover:brightness-125 transition-all" onClick={() => setIsMobileMenuOpen(false)}>
+        <Link
+          href="/"
+          className="flex items-center gap-4 group transition-all"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          <span className="w-12 h-12 rounded-full border border-gold/50 flex items-center justify-center text-gold group-hover:border-gold transition-all duration-300 gold-glow overflow-hidden relative bg-black shrink-0">
+            <Image src="/logo_gold.png" alt="Wang Officina Sacra" fill className="object-contain p-1.5" />
+          </span>
+          <span className="font-serif text-xl tracking-widest uppercase text-gradient-gold group-hover:brightness-125 transition-all">
             Wang - Officina Sacra
-          </Link>
-        </div>
+          </span>
+        </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-16 items-center text-sm uppercase tracking-widest text-foreground/70">
-          <Link href="/dispositivi" className="hover:text-gold gold-glow transition-all">Dispositivi</Link>
-          <Link href="/materiali" className="hover:text-gold gold-glow transition-all">Materiali</Link>
-          <Link href="/libro" className="hover:text-gold gold-glow transition-all">Libro</Link>
-          <Link href="/chi-sono" className="hover:text-gold gold-glow transition-all">Chi sono?</Link>
-          <Link href="/realizzazioni" className="hover:text-gold gold-glow transition-all">Realizzazioni</Link>
+        <nav className="hidden md:flex gap-5 lg:gap-8 xl:gap-12 items-center text-xs lg:text-sm uppercase tracking-widest text-foreground/70">
+          {navigationItems.map((item) => (
+            <Link key={item.href} href={item.href} className="hover:text-gold gold-glow transition-all">
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -87,11 +101,16 @@ export default function Navigation() {
             transition={{ duration: 0.3 }}
             className="absolute top-full left-0 w-full glass-panel thin-divider p-6 flex flex-col gap-6 md:hidden"
           >
-            <Link href="/dispositivi" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Dispositivi</Link>
-            <Link href="/materiali" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Materiali</Link>
-            <Link href="/libro" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Libro</Link>
-            <Link href="/chi-sono" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Chi sono?</Link>
-            <Link href="/realizzazioni" className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all" onClick={() => setIsMobileMenuOpen(false)}>Realizzazioni</Link>
+            {navigationItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-lg font-serif uppercase tracking-wider hover:text-gold gold-glow transition-all"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
           </motion.div>
         )}
       </AnimatePresence>

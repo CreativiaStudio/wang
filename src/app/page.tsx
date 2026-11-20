@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { useRef, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const journeyLinks = [
   { href: "/dispositivi", label: "Dispositivi" },
@@ -12,113 +13,170 @@ const journeyLinks = [
 ] as const;
 
 export default function Home() {
+  const [isJourneyOpen, setIsJourneyOpen] = useState(false);
+  const journeySectionRef = useRef<HTMLElement>(null);
+
+  const handleToggleJourney = () => {
+    const nextOpen = !isJourneyOpen;
+    setIsJourneyOpen(nextOpen);
+    if (nextOpen) {
+      setTimeout(() => {
+        journeySectionRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 80);
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen relative z-10">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-28 pb-10 px-4 sm:px-6">
         <div className="absolute inset-0 bg-[url('/hero_bg_clean.jpg')] bg-cover bg-center opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/0" />
 
         <motion.div
-          className="relative z-10 container mx-auto px-6 text-center flex flex-col items-center glass-panel p-12 rounded-2xl max-w-4xl mt-32"
+          className="relative z-10 container mx-auto text-center flex flex-col items-center glass-panel p-8 sm:p-12 rounded-2xl max-w-4xl"
           style={{ backgroundColor: "rgba(10, 10, 10, 0.75)" }}
-          initial={{ opacity: 0, y: 100 }}
+          initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 1.4, ease: [0.25, 0.1, 0.25, 1] }}
           viewport={{ once: true }}
         >
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-serif text-gradient-gold mb-6 uppercase tracking-wider md:tracking-widest leading-tight">
-            Benvenuti <br /> nell’Officina Sacra.
-          </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-foreground/80 font-light max-w-2xl mx-auto mb-12">
+          <p className="text-lg sm:text-xl md:text-2xl text-foreground/80 font-light max-w-3xl mx-auto mb-10 sm:mb-12 leading-relaxed">
             In uno spazio limitato, in cui regnano il silenzio e l’ascolto, vengono al mondo creazioni nate per essere un Ponte verso l’Infinito.
           </p>
+
           <Link
             href="#manifesto"
-            aria-label="Scorri al manifesto"
             className="group flex flex-col items-center gap-4 text-gold hover:text-white transition-colors duration-500"
+            aria-label="Scorri fino al Manifesto"
           >
-            <span className="text-sm uppercase tracking-widest font-serif text-gold group-hover:text-white transition-colors duration-500">Scorri</span>
-            <svg
-              className="w-6 h-6 transition-transform duration-500 group-hover:translate-y-2"
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-serif text-gradient-gold uppercase tracking-wider md:tracking-widest leading-tight">
+              Benvenuti <br className="sm:hidden" /> nell’Officina Sacra.
+            </h1>
+            <motion.svg
+              className="w-6 h-6 text-gold group-hover:text-white transition-colors duration-500"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
+              animate={{ y: [0, 6, 0] }}
+              transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v16m0 0l-6-6m6 6l6-6" />
-            </svg>
+            </motion.svg>
           </Link>
         </motion.div>
       </section>
 
       {/* Manifesto Section */}
-      <section id="manifesto" className="pt-24 pb-12 md:pt-32 md:pb-16 relative flex items-center justify-center px-6 scroll-mt-24">
-        <motion.div
-          className="max-w-3xl mx-auto text-center font-serif text-lg md:text-2xl leading-[1.6] text-foreground/80 italic space-y-10"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          <p>
-            Non è solo Artigianato.<br />
-            Non è solo Spiritualità.<br />
-            Ogni gesto è un Rito.<br />
-            Ogni forma è un Codice.<br />
-            Ogni creazione è un Messaggio.
-          </p>
-          <p>
-            Ogni strumento è un’offerta silenziosa.<br />
-            Oggetti realizzati a mano, con Presenza e Intenzione, ispirati alle Tradizioni simboliche e ai Percorsi interiori.
-          </p>
-        </motion.div>
-      </section>
-
-      {/* Inizia il viaggio */}
-      <section className="py-24 md:py-32 px-6">
-        <div className="container mx-auto max-w-7xl flex flex-col items-center">
+      <section id="manifesto" className="py-20 md:py-28 relative flex items-center justify-center px-6 scroll-mt-24">
+        <div className="max-w-3xl mx-auto w-full text-center font-serif text-xl md:text-3xl leading-[1.7] text-foreground/80 italic">
           <motion.div
-            className="flex flex-col items-center"
-            initial={{ opacity: 0, y: 50 }}
+            className="space-y-3"
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
-            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+            viewport={{ once: true, margin: "-80px" }}
           >
-            <h2 className="text-4xl md:text-6xl font-serif text-gradient-gold text-center uppercase tracking-wider">Inizia il viaggio</h2>
-            <div className="w-px h-16 bg-gold my-10" aria-hidden="true" />
+            <p>Non è solo Artigianato.</p>
+            <p>Non è solo Spiritualità.</p>
+            <p>Ogni gesto è un Rito.</p>
+            <p>Ogni forma è un Codice.</p>
+            <p className="text-gradient-gold">Ogni creazione è un Messaggio.</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 w-full">
-            {journeyLinks.map((link, index) => (
-              <motion.div
-                key={link.href}
-                className="h-full"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1], delay: index * 0.1 }}
-                viewport={{ once: true, margin: "-50px" }}
+          <div className="w-16 h-px bg-gold/40 mx-auto my-10" aria-hidden="true" />
+
+          <motion.div
+            className="space-y-6 text-lg md:text-2xl leading-[1.7]"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
+            viewport={{ once: true, margin: "-80px" }}
+          >
+            <p className="text-gold">Ogni strumento è un’offerta silenziosa.</p>
+            <p>
+              Oggetti realizzati a mano, con Presenza e Intenzione, ispirati alle Tradizioni simboliche e ai Percorsi interiori.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Inizia il Viaggio */}
+      <section
+        ref={journeySectionRef}
+        className="min-h-[calc(100svh-5rem)] flex flex-col items-center justify-center py-12 px-6 overflow-hidden"
+      >
+        <div className="w-full max-w-xl mx-auto text-center flex flex-col items-center">
+          <button
+            type="button"
+            onClick={handleToggleJourney}
+            aria-expanded={isJourneyOpen}
+            aria-controls="inizia-viaggio-menu"
+            className="group flex flex-col items-center gap-3 focus:outline-none focus-visible:ring-1 focus-visible:ring-gold/60 rounded-sm px-4 py-2"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif text-gradient-gold uppercase tracking-widest transition-all duration-300 group-hover:brightness-125">
+              Inizia il viaggio
+            </h2>
+            <span className="flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-gold/70 group-hover:text-gold transition-colors">
+              <span>{isJourneyOpen ? "Chiudi" : "Apri il menù"}</span>
+              <motion.svg
+                animate={{ rotate: isJourneyOpen ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
               >
-                <Link
-                  href={link.href}
-                  className="group glass-panel thin-divider gold-glow flex flex-col items-center justify-center gap-8 h-full min-h-48 p-8 rounded-2xl text-center text-gold hover:text-white transition-all duration-500 hover:-translate-y-1"
-                >
-                  <span className="font-serif text-xl uppercase tracking-widest text-gradient-gold">{link.label}</span>
-                  <svg
-                    className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 12h14m0 0l-6-6m6 6l-6 6" />
-                  </svg>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
+              </motion.svg>
+            </span>
+          </button>
+
+          <AnimatePresence initial={false}>
+            {isJourneyOpen && (
+              <motion.nav
+                id="inizia-viaggio-menu"
+                aria-label="Menu principale di navigazione"
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                className="overflow-hidden w-full"
+              >
+                <div className="flex flex-col items-center gap-4 sm:gap-6 mt-8">
+                  {journeyLinks.map((item, index) => (
+                    <motion.div
+                      key={item.href}
+                      initial={{ opacity: 0, y: 12 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.05 }}
+                    >
+                      <Link
+                        href={item.href}
+                        className="group flex items-center gap-3 font-serif text-2xl sm:text-3xl uppercase tracking-[0.22em] text-foreground/85 hover:text-gold transition-colors duration-300 py-1"
+                      >
+                        <span className="text-gradient-gold group-hover:brightness-125 transition-all">
+                          {item.label}
+                        </span>
+                        <svg
+                          className="w-5 h-5 text-gold/70 group-hover:text-gold transition-transform duration-300 group-hover:translate-x-1.5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 12h14m-6-6l6 6-6 6" />
+                        </svg>
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.nav>
+            )}
+          </AnimatePresence>
         </div>
       </section>
     </div>

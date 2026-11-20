@@ -27,7 +27,7 @@ export default function ChiSonoPage() {
           </p>
 
           <p>
-            Un giorno vidi una Pentasfera. Era come se l'avessi conosciuta da sempre ed ero già in grado di realizzarla. Dopo due giorni ne costruivo una in rame, seguendo un sapere che affiorava dall'interno, come una memoria attiva. Poi incontrai la Genesa, ma intuivo che ci fosse ancora altro. Da allora non mi sono più fermato. Le geometrie hanno cominciato a parlarmi. Ho visto direzioni, strutture, ho ascoltato i loro desideri; forme che chiedevano di venire al mondo. Negli anni successivi ho dato corpo e senso a queste visioni: costruzioni geometriche che offrono indicazioni, aprono nuove Vie, nuove architetture dell'Essere.
+            Un giorno, insieme a un esperto di fiducia, vidi una Pentasfera. Era come se l'avessi conosciuta da sempre ed ero già in grado di realizzarla. Dopo due giorni ne costruivo una in rame, seguendo un sapere che affiorava dall'interno, come una memoria attiva. Poi incontrai la Genesa, ma intuivo che ci fosse ancora altro. Da allora non mi sono più fermato. Le geometrie hanno cominciato a parlarmi. Ho visto direzioni, strutture, ho ascoltato i loro desideri; forme che chiedevano di venire al mondo. Negli anni successivi ho dato corpo e senso a queste visioni: costruzioni geometriche che offrono indicazioni, aprono nuove Vie, nuove architetture dell'Essere.
           </p>
 
           <figure className="glass-panel relative my-16 overflow-hidden rounded-sm border border-[#d4af37]/40 bg-black/20 p-3 shadow-2xl shadow-black/25 sm:p-5">

@@ -71,12 +71,22 @@ export default function MaterialiPage() {
         <header className="mb-20 text-center md:mb-24">
           <div aria-hidden="true" className="mx-auto mb-8 h-px w-24 bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
           <h1 className="text-gradient-gold mb-6 font-serif text-5xl uppercase tracking-widest md:text-7xl">
-            Lo Spirito e L&apos;Anima
+            Materiali adoperati
           </h1>
-          <p className="mx-auto max-w-2xl text-xl font-light leading-relaxed text-foreground/70">
-            I materiali non sono inermi. Essi partecipano all&apos;equazione alchemica del dispositivo.
-            Esplora le qualità sottili di Metalli e Legni interagendo con il testo.
-          </p>
+          <div className="mx-auto max-w-2xl space-y-5 font-serif text-xl italic font-light leading-relaxed text-foreground/85 md:text-2xl">
+            <p>
+              Scelgo i materiali per ciò che sanno evocare in me
+              <br />
+              e per come risuonano con le Forze che intendo richiamare.
+            </p>
+            <p>
+              Ogni materiale ha un&rsquo;Anima,
+              <br />
+              un&rsquo;impronta sottile che va oltre la forma.
+            </p>
+            <p>È la loro sostanza a parlarmi.</p>
+            <p className="text-gold/90">Basta saper ascoltare.</p>
+          </div>
         </header>
 
         <div className="mx-auto max-w-4xl space-y-8">
